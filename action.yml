@@ -7,6 +7,9 @@ input:
   REVIEWERS:
     description: "Reviewers for this repository."
     required: true
+  PR_NUMBER:
+    description: "The Pull Request Number ID"
+    required: true
 
 runs:
   using: "docker"
