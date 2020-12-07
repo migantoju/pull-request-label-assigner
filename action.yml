@@ -1,0 +1,19 @@
+name: "Pull Reques Labeler & Assigner"
+description: "This action allow you to set a label to the PR depends on the size and assign to a memeber of your team."
+input:
+  GITHUB_TOKEN:
+    description: "GitHub Token"
+    required: true
+  REVIEWERS:
+    description: "Reviewers for this repository."
+    required: true
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - $ {{ inputs.GITHUB_TOKEN  }}
+
+branding:
+  icon: "tag"
+  color: "green"
