@@ -1,0 +1,13 @@
+name: Pull Request Label and Assigner
+on: [pull_request]
+
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull Request Assigner
+        uses: migantoju/pull-request-label-assigner@master
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.number }}
+          REVIEWERS: migantoju
