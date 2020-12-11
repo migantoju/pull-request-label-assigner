@@ -1,5 +1,5 @@
 name: Pull Request Label and Assigner
-on: [pull_request]
+on: [push, pull_request]
 
 jobs:
   test_job:
